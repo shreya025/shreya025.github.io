@@ -1,10 +1,12 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack header and content vertically */
+    justify-content: flex-start; /* Align items to the top */
     align-items: center;
     min-height: 100vh;
     margin: 0;
     font-family: sans-serif;
+    background-color: black;
 }
 
 .brain-container {
@@ -57,4 +59,13 @@ body {
 .cerebellum {
     bottom: 5%;
     left: 20%;
+}
+
+h1 {
+    color: white;
+    font-size: 5em;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    letter-spacing: 0.08em; /* Increase space between letters */
 }
