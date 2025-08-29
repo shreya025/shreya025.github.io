@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.brain-container {
+    position: relative;
+    width: 800px;
+    max-width: 90%;
+}
+
+.brain-image {
+    width: 100%;
+    height: auto;
+}
+
+.brain-button {
+    position: absolute;
+    background-color: rgba(0, 102, 204, 0.7);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.brain-button:hover {
+    background-color: rgba(0, 102, 204, 1);
+}
+
+.frontal {
+    top: 15%;
+    left: 70%;
+}
+
+.parietal {
+    top: 15%;
+    left: 30%;
+}
+
+.temporal {
+    top: 50%;
+    left: 65%;
+}
+
+.occipital {
+    top: 40%;
+    left: 10%;
+}
+
+.cerebellum {
+    bottom: 5%;
+    left: 20%;
+}
