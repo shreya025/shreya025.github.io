@@ -5,7 +5,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: black;
 }
 
@@ -27,7 +27,7 @@ body {
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
     transition: background-color 0.3s;
     white-space: nowrap;
 }
@@ -63,9 +63,15 @@ body {
 
 h1 {
     color: white;
-    font-size: 5em;
+    font-size: 6em;
     text-align: center;
     width: 100%;
     margin-top: 20px;
-    letter-spacing: 0.08em; /* Increase space between letters */
+    letter-spacing: 0.03em; /* Increase space between letters */
+    font-weight: 301; /* Make the title skinnier */
+    word-spacing: 0.2em; /* Add more space between words */
+}
+
+h1, h2, h3, h4, h5, h6, p, a, .brain-button {
+    font-family: 'Montserrat', sans-serif;
 }
