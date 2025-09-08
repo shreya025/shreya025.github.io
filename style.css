@@ -5,9 +5,11 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Fira Code', monospace;
     background-color: black;
+    gap: 0;
 }
+
 
 .brain-container {
     position: relative;
@@ -63,15 +65,65 @@ body {
 
 h1 {
     color: white;
-    font-size: 6em;
+    font-size: 5em; /* was 6em */
     text-align: center;
     width: 100%;
     margin-top: 20px;
-    letter-spacing: 0.03em; /* Increase space between letters */
+    letter-spacing: 0.05em; /* Increase space between letters */
     font-weight: 301; /* Make the title skinnier */
-    word-spacing: 0.2em; /* Add more space between words */
+    word-spacing: 0.04em; /* Add more space between words */
+    margin-bottom: 0;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, .brain-button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Fira Code', monospace;
+}
+
+.section-label {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px; 
+    font-weight: bold;
+    font-size: 1.3em; /* was 1.2em */
+    color:white;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none;
+    display: none;  
+
+    /*text-transform: uppercase;*/
+}
+
+/* Individual label positioning - adjust these values! */
+#label-cerebellum {
+    top: 55%;
+    left: -9%;
+}
+
+#label-frontal {
+    top: 25%;
+    left: 105%;
+}
+
+#label-parietal {
+    top: 18%;
+    left: -2%;
+}
+
+#label-temporal {
+    top: 50%;
+    left: 113%;
+}
+
+#label-occipital {
+    top: 35%;
+    left: -13%;
+}
+
+.section-label span {
+    font-size: 0.7em; /* Make the content label smaller */
+    font-weight: normal; /* Make the text less bold */
 }
