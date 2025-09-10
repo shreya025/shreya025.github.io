@@ -271,91 +271,106 @@ a {
 
 
 
+/* ======================== */
+/* PARIETAL LOBE PAGE STYLES */
+/* ======================== */
 
-/*PARIETAL LOBE PAGE*/
-/*PARIETAL LOBE PAGE*/
-/*PARIETAL LOBE PAGE*/
-
-/* Collapsible Sections */
+/* Collapsible Cards */
 details {
-  background: #1e1e1e;  /* dark card when closed */
-  color: #ffffff;        /* white text */
+  display: block;
+  width: 100%;
+  max-width: 1000px;       /* card max width */
+  margin: 1.5rem auto;     /* center card */
+  padding: 1rem 1.5rem;    /* spacing inside card */
+  box-sizing: border-box;   /* include padding in width */
+  background: #1e1e1e;      /* dark card */
+  color: #ffffff;           /* default text color */
   border-radius: 10px;
-  margin: 1.5rem 0;
-  padding: 1rem 1.2rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
   font-family: "Fira Code", monospace;
-
-  display: block;         /* makes each act like a block card */
-  width: auto;            /* don’t stretch full width */
-  max-width: 1000px;  
-  min-width: 1000px;     /* optional: control card width */
-  margin: 1.5rem auto;    /* centers and spaces them out */
-  box-sizing: border-box;      
 }
 
+/* Open state */
 details[open] {
-  background: #1e1e1e;
+  background: #111111;      /* slightly darker for contrast */
   box-shadow: 0 6px 12px rgba(0,0,0,0.12);
   color: #ffffff;
 }
 
+/* Summary styling */
 details summary {
+  display: flex;               /* flex to place arrow on right */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: bold;
+  margin-bottom: 0.5rem;
+  white-space: normal;         /* wrap text if long */
   outline: none;
   list-style: none;
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
+/* Hide default arrow */
 details summary::-webkit-details-marker {
-  display: none; /* hide default arrow */
+  display: none;
 }
 
 /* Custom arrow */
 details summary::after {
   content: "▶";
   font-size: 0.9rem;
-  margin-left: 0.5rem;
   transition: transform 0.3s ease;
+  color: #ccc;
 }
 
 details[open] summary::after {
   transform: rotate(90deg);
+  color: #fff;
 }
 
-/* Inside content */
+/* Inner content: paragraphs, lists */
+details p,
+details li,
 details ul {
-  margin: 0.5rem 0 0 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: normal;       /* wrap at spaces */
+  overflow-wrap: normal;     /* do not split words */
+  word-wrap: normal;         /* fallback for older browsers */
+  margin: 0.5rem 0;          /* spacing between lines */
   padding: 0;
   color: #ffffff;
-  width: 100%;           /* ensures content doesn’t expand the card */
-  box-sizing: border-box;
-  white-space: normal;  /* allows text to wrap */
 }
 
+/* Unordered list styling */
+details ul {
+  margin-left: 1rem;         /* indent bullet points */
+  padding-left: 1rem;
+}
+
+/* List items */
 details li {
-  margin: 0.6rem 0;
-  color: #ffffff;
+  margin: 0.5rem 0;
 }
 
+/* Lab/Project headings */
 details h3 {
   margin: 0.2rem 0;
   font-size: 1rem;
   font-weight: 600;
-  color:#a145df
+  color: #ffffff;            /* default: white */
 }
 
-details p {
-  margin: 0.2rem 0 0.5rem;
-  font-size: 0.95rem;
-  color: #ffffff;
-  box-sizing: border-box;
-  white-space: normal;  /* allows text to wrap */
-  overflow-wrap: normal; 
+/* Lab name only in purple */
+details h3 {
+  color: #a145df;
+}
+
+/* Supervisor styling */
+.supervisor {
+  text-align: left;
 }
