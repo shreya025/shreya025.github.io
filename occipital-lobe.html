@@ -6,15 +6,65 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Occipital Lobe</title>
+    <title>Frontal Lobe | About Me </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="page-content">
         <h1>GALLERY</h1>
-        <p>The OCCIPITAL LOBE is the visual processing center of the brain. <br> Here are some interesting pictures from my research and projects.</p>
+        <p>The OCCIPITAL LOBE is the visual processing center of the brain. <br> Here are some interesting photos from my experiences.</p>
         <a href="index.html" class="brain-button">
-        <img src="logos/brain.svg" alt="Back to brain page">
+            <img src="logos/brain.svg" alt="Back to brain page">
+        </a>
     </div>
+
+    <div class="gallery-carousel">
+        <div class="carousel-slide">
+            <img src="images/whiteboard.jpg" alt="Whiteboard notes on philosophy of science">
+            <p class="caption">Whiteboard notes on Philosophy of Science</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="images/neurotech_video.jpg" alt="Neurotech conference video">
+            <p class="caption">Neurotech conference video</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="images/neurotech1.jpg" alt="Neurotech conference photo 1">
+            <p class="caption">Neurotech conference highlights</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="images/neurotech2.jpg" alt="Neurotech conference photo 2">
+            <p class="caption">Another conference highlight</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="images/chatgpt_piaget.jpg" alt="ChatGPT Piaget experiment">
+            <p class="caption">ChatGPT getting a Piaget question wrong</p>
+        </div>
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function showSlides(n) {
+          const slides = document.querySelectorAll(".carousel-slide");
+          if (n >= slides.length) { slideIndex = 0; }
+          if (n < 0) { slideIndex = slides.length - 1; }
+          slides.forEach(slide => slide.style.display = "none");
+          slides[slideIndex].style.display = "block";
+        }
+
+        document.querySelector(".prev").addEventListener("click", () => {
+          slideIndex--;
+          showSlides(slideIndex);
+        });
+
+        document.querySelector(".next").addEventListener("click", () => {
+          slideIndex++;
+          showSlides(slideIndex);
+        });
+    </script>
 </body>
 </html>

@@ -14,10 +14,6 @@
     <div style="position: relative; width: 656px; max-width: 90%; margin: 0 auto;">
         <img src="images/brainimage.jpg" usemap="#image-map" width="656" height="728" style="width: 100%; height: auto; display: block;">
         <map name="image-map">
-            <area alt="Cerebellum" 
-                  href="cerebellum.html" 
-                  coords="220,450,220,417,237,387,242,362,235,339,218,323,168,334,121,335,78,362,75,404,91,433,117,447,142,454,160,475,185,491,203,480" 
-                  shape="poly">
             <area alt="Frontal Lobe" 
                   href="frontal-lobe.html" 
                   coords="427,388,432,399,455,405,485,415,543,435,580,430,608,373,609,315,584,266,555,213,503,169,456,134,446,139,435,162,431,182,417,211,420,240,431,255,445,258,464,245,466,262,475,261,487,269,478,293,489,300,504,313,498,331,476,354,465,372,449,377" 
@@ -36,8 +32,6 @@
                   shape="poly">
         </map>
         <svg id="overlay-svg" style="position:absolute; left:0; top:0; pointer-events:none; width:100%; height:auto;" viewBox="0 0 656 728">
-            <polygon id="cerebellum-overlay" points="220,450,220,417,237,387,242,362,235,339,218,323,168,334,121,335,78,362,75,404,91,433,117,447,142,454,160,475,185,491,203,480"
-              fill="rgba(255,105,180,0.3)" visibility="hidden"/>
             <polygon id="frontal-overlay" points="427,388,432,399,455,405,485,415,543,435,580,430,608,373,609,315,584,266,555,213,503,169,456,134,446,139,435,162,431,182,417,211,420,240,431,255,445,258,464,245,466,262,475,261,487,269,478,293,489,300,504,313,498,331,476,354,465,372,449,377"
               fill="rgba(255,105,180,0.3)" visibility="hidden"/>
             <polygon id="parietal-overlay" points="438,128,385,110,347,105,319,101,285,93,229,109,192,125,154,149,136,174,159,199,164,217,163,245,180,254,189,276,198,301,219,308,242,302,249,280,258,258,287,250,320,247,359,247,394,253,415,247,414,216,421,192,429,171,443,144"
@@ -49,7 +43,6 @@
         </svg>
 
         <!-- Section labels (initially hidden) -->
-        <div class="section-label" id="label-cerebellum">Cerebellum<br><span>Balance</span></div>
         <div class="section-label" id="label-frontal">Frontal Lobe<br><span>About Me</span></div>
         <div class="section-label" id="label-parietal">Parietal Lobe<br><span>Research</span></div>
         <div class="section-label" id="label-temporal">Temporal Lobe<br><span>Influences</span></div>
@@ -76,9 +69,6 @@
             } else if (alt === 'Frontal Lobe') {
                 overlayId = 'frontal-overlay';
                 labelId = 'label-frontal';
-            } else if (alt === 'Cerebellum') {
-                overlayId = 'cerebellum-overlay';
-                labelId = 'label-cerebellum';
             }
 
             document.getElementById(overlayId).setAttribute('visibility', 'visible');
@@ -101,9 +91,6 @@
             } else if (alt === 'Frontal Lobe') {
                 overlayId = 'frontal-overlay';
                 labelId = 'label-frontal';
-            } else if (alt === 'Cerebellum') {
-                overlayId = 'cerebellum-overlay';
-                labelId = 'label-cerebellum';
             }
             
             document.getElementById(overlayId).setAttribute('visibility', 'hidden');

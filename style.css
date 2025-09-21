@@ -1,3 +1,6 @@
+/* ======================== */
+/* GENERAL PAGE STYLES */
+/* ======================== */
 body {
     display: flex;
     flex-direction: column; /* Stack header and content vertically */
@@ -9,7 +12,6 @@ body {
     background-color: black;
     gap: 0;
 }
-
 
 .brain-container {
     position: relative;
@@ -32,34 +34,13 @@ body {
     transform-origin: center;
 }
 
+.brain-button:hover {
+    filter: brightness(70%); /* Darkens the image to 70% of its original brightness */
+}
+
 .brain-button img {
     width: 80px; 
     height: 80px;
-}
-
-.frontal {
-    top: 15%;
-    left: 70%;
-}
-
-.parietal {
-    top: 15%;
-    left: 30%;
-}
-
-.temporal {
-    top: 50%;
-    left: 65%;
-}
-
-.occipital {
-    top: 40%;
-    left: 10%;
-}
-
-.cerebellum {
-    bottom: 5%;
-    left: 20%;
 }
 
 h1 {
@@ -78,6 +59,21 @@ h1, h2, h3, h4, h5, h6, p, a, .brain-button {
     font-family: 'Fira Code', monospace;
 }
 
+p {
+  color: #ffffff; 
+  font-size: 1.0em; /* Makes the font slightly larger */
+  line-height: 1.6; /* Adds space between lines for readability */
+  text-align: center;
+  margin-top: 2px;
+}
+
+
+
+
+
+/* ======================== */
+/* BRAIN PAGE STYLES */
+/* ======================== */
 .section-label {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -86,22 +82,14 @@ h1, h2, h3, h4, h5, h6, p, a, .brain-button {
     border-radius: 5px;
     padding: 6px 12px; 
     font-weight: bold;
-    font-size: 1.3em; /* was 1.2em */
+    font-size: 1.3em; 
     color:white;
     white-space: nowrap;
     z-index: 10;
     pointer-events: none;
     display: none;  
-
-    /*text-transform: uppercase;*/
 }
-
-/* Individual label positioning - adjust these values! */
-#label-cerebellum {
-    top: 55%;
-    left: -9%;
-}
-
+/* Individual label positioning */
 #label-frontal {
     top: 25%;
     left: 105%;
@@ -127,28 +115,24 @@ h1, h2, h3, h4, h5, h6, p, a, .brain-button {
     font-weight: normal; /* Make the text less bold */
 }
 
-p {
-  color: #ffffff; 
-  font-family: 'Fira Code', monospace; /* Sets the font to Fira Code */
-  font-size: 1.1em; /* Makes the font slightly larger */
-  line-height: 1.6; /* Adds space between lines for readability */
-  text-align: center;
-}
 
-.brain-button:hover {
-    filter: brightness(70%); /* Darkens the image to 70% of its original brightness */
-}
 
-/* Style for your profile photo */
+
+
+/* ======================== */
+/* ABOUT ME PAGE STYLES */
+/* ======================== */
 .profile-photo {
-    width: 250px; /* Or whatever size you prefer */
-    height: auto;
-    margin: 20px;
+    width: auto; 
+    height: 500px;
+    margin: 0px;
+    margin-top: 0px;
 }
 
 /* Style for the bio paragraph */
 .bio-paragraph {
     max-width: 600px;
+    margin-top: 0px;
     margin-bottom: 20px;
     font-size: 1.1em;
     line-height: 1.6;
@@ -199,6 +183,13 @@ p {
     flex-shrink: 0; /* image won’t shrink */
 }
 
+
+
+
+
+/* ======================== */
+/* NOTE PAGE STYLES */
+/* ======================== */
 .footer {
     /* Ensures the footer is at the bottom of your page content */
     margin-top: -40px; 
@@ -269,108 +260,146 @@ a {
 
 
 
-
-
 /* ======================== */
 /* PARIETAL LOBE PAGE STYLES */
 /* ======================== */
 
-/* Collapsible Cards */
-details {
-  display: block;
-  width: 100%;
-  max-width: 1000px;       /* card max width */
-  margin: 1.5rem auto;     /* center card */
-  padding: 1rem 1.5rem;    /* spacing inside card */
-  box-sizing: border-box;   /* include padding in width */
-  background: #1e1e1e;      /* dark card */
-  color: #ffffff;           /* default text color */
+/* General Section Headings */
+h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ccc; /* A subtle line for separation */
+    padding-bottom: 0.5rem;
+}
+
+/* Existing styles below (no changes needed for the project layout) */
+.research-section, .academic-section {
+    margin-top: 2rem;
+}
+
+.research-project {
+    color: white;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-description {
+    flex-grow: 1;
+}
+
+.project-description h3 {
+    margin-top: 0;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .research-project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .project-description {
+        text-align: center;
+    }
+}
+
+
+
+
+/* ======================== */
+/* OCCIPITAL LOBE PAGE STYLES */
+/* ======================== */
+.gallery-carousel {
+  position: relative;
+  overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-  font-family: "Fira Code", monospace;
+
+  display: flex;            /* enables flex layout */
+  align-items: center;      /* vertically centers slide content */
+  justify-content: center;  /* horizontally centers slide content */
+  flex-direction: column;   /* stack image and caption */
+
+
+  width: 80%; /* Adjust this to change the width of the carousel */
+  margin: 0 auto; /* This centers the carousel on the page */
 }
 
-/* Open state */
-details[open] {
-  background: #111111;      /* slightly darker for contrast */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
-  color: #ffffff;
-}
-
-/* Summary styling */
-details summary {
-  display: flex;               /* flex to place arrow on right */
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  white-space: normal;         /* wrap text if long */
-  outline: none;
-  list-style: none;
-}
-
-/* Hide default arrow */
-details summary::-webkit-details-marker {
+.carousel-slide {
   display: none;
-}
+  text-align: center;
+  color: #fff; /* caption color */
 
-/* Custom arrow */
-details summary::after {
-  content: "▶";
-  font-size: 0.9rem;
-  transition: transform 0.3s ease;
-  color: #ccc;
-}
-
-details[open] summary::after {
-  transform: rotate(90deg);
-  color: #fff;
-}
-
-/* Inner content: paragraphs, lists */
-details p,
-details li,
-details ul {
+  display: flex;            /* make slide content a flex container */
+  flex-direction: column;   /* image on top, caption below */
+  align-items: center;      /* center horizontally */
+  justify-content: center;  /* center vertically inside the slide */
+  
+  flex-shrink: 0;
   width: 100%;
-  box-sizing: border-box;
-  white-space: normal;       /* wrap at spaces */
-  overflow-wrap: normal;     /* do not split words */
-  word-wrap: normal;         /* fallback for older browsers */
-  margin: 0.5rem 0;          /* spacing between lines */
-  padding: 0;
-  color: #ffffff;
 }
 
-/* Unordered list styling */
-details ul {
-  margin-left: 1rem;         /* indent bullet points */
-  padding-left: 1rem;
+.carousel-slide img {
+  width: 100%;
+  max-width: 100%;          /* ensures responsiveness */
+  border-radius: 10px;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* List items */
-details li {
-  margin: 0.5rem 0;
+.carousel-slide .caption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  text-align: center;       /* ensure caption centered under image */
 }
 
-/* Lab/Project headings */
-details h3 {
-  margin: 0.2rem 0;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;            /* default: white */
+.carousel-slide p.caption {
+    margin-top: 15px;
+    font-family: 'Fira Code', monospace;
+    color: #666;
 }
 
-/* Lab name only in purple */
-details h3 {
-  color: #a145df;
-}
+.prev { left: 10px; }
+.next { right: 10px; }
 
-/* Supervisor styling */
-.supervisor {
-  text-align: left;
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
 }
