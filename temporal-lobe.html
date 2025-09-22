@@ -2,19 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Temporal Lobe</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="page-content">
+
+    <header>
         <h1>INFLUENCES</h1>
-        <p>This section is responsible for a variety of complex cognitive functions.</p>
-        <a href="index.html" class="brain-button">
-        <img src="logos/brain.svg" alt="Back to brain page">
+        <p>A collection of books, music, and ideas that have shaped me.</p>
+    </header>
+
+   <main class="gallery-container">
+    <div class="gallery-item large ted-talk">
+        <a href="#" onclick="openModal('images/ken_robinson.jpg', 'Do Schools Kill Creativity?', 'Sir Ken Robinson’s humorous and profound TED Talk challenged conventional educational systems, sparking a global conversation on creativity.')">
+            <img src="images/influences/loftusimage.png" alt="Image form Elizabeth Loftus's TED Talk">
+        </a>
     </div>
+
+    <div class="gallery-item normal arctic-monkeys">
+        <a href="#" onclick="openModal('images/arctic_monkeys.jpg', 'Arctic Monkeys', 'The band’s evolution from indie rock to more complex sounds has been a key influence on my taste in music.')">
+            <img src="images/influences/amimage.png" alt="Arctic Monkeys album cover">
+        </a>
+    </div>
+
+    <div class="gallery-item normal handmaids-tale">
+        <a href="#" onclick="openModal('images/handmaidcover.jpg', 'The Handmaid’s Tale', 'Margaret Atwood’s dystopian novel is a chilling look at a future society and a powerful piece of social commentary.')">
+            <img src="images/influences/handmaidcover.jpg" alt="The Handmaid's Tale book cover">
+        </a>
+    </div>
+
+    <div class="gallery-item tall kaguya">
+        <a href="#" onclick="openModal('images/the_tale_of_princess_kaguya.jpg', 'The Tale of Princess Kaguya', 'Studio Ghibli’s animated film is a beautiful, hand-drawn masterpiece with a moving narrative about life and acceptance.')">
+            <img src="images/influences/kaguyaimage.png" alt="Still from The Tale of Princess Kaguya">
+        </a>
+    </div>
+
+    <div class="gallery-item wide kauai">
+        <a href="#" onclick="openModal('images/kauai_oo.jpg', 'Kauai O’o (Racing Extinction)', 'A poignant clip from the documentary that documents the final song of a now-extinct bird, a powerful reminder of environmental impact.')">
+            <img src="images/influences/Moho_braccatus.jpg" alt="Kauai O'o bird">
+        </a>
+    </div>
+
+    <div class="gallery-item normal the-women">
+        <a href="#" onclick="openModal('images/thewomenimage.jpg', 'The Women', 'A profound movie about a tight-knit group of friends navigating life, careers, and the complexities of human relationships.')">
+            <img src="images/influences/thewomenimage.jpg" alt="The Women book cover">
+        </a>
+    </div>
+
+    <div class="gallery-item normal law-of-conservation">
+        <a href="#" onclick="openModal('images/law_of_conservation.jpg', 'Law of Conservation (Clip)', 'A thought-provoking clip that explores the idea that energy cannot be created or destroyed, only transformed.')">
+            <img src="images/influences/conservationtaskimage.png" alt="Still from a Youtube clip">
+        </a>
+    </div>
+</main>
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modal-image" src="" alt="Popup image">
+            <div class="modal-text">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+     <a href="index.html" class="brain-button">
+            <img src="logos/brain.svg" alt="Back to brain page">
+    </a>
+
 </body>
-</html>
+
+<footer class="empty-footer"></footer>
+
+<script src="script.js"></script> </html>
