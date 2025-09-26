@@ -1,21 +1,32 @@
 // Get the modal and its content elements
 var modal = document.getElementById("myModal");
-var modalImage = document.getElementById("modal-image");
 var modalTitle = document.getElementById("modal-title");
 var modalDescription = document.getElementById("modal-description");
 
 // Function to open the modal
-function openModal(imageSrc, titleText, descriptionText) {
-    // Set the content of the modal
-    modalImage.src = imageSrc;
-    modalTitle.textContent = titleText;
+function openModal(titleText, descriptionText, url) { 
+    
+    // CHECK 1: If a valid URL is provided (i.e., not null, undefined, or empty)
+    if (url) {
+        // Construct the title as a link
+        modalTitle.innerHTML = `
+            <a href="${url}" target="_blank">
+                ${titleText}
+            </a>
+        `;
+    } else {
+        // CHECK 2: If no URL is provided, just set the title as plain text
+        modalTitle.textContent = titleText;
+    }
+
+    // Set the description content
     modalDescription.textContent = descriptionText;
     
     // Display the modal
     modal.style.display = "flex";
 }
 
-// Function to close the modal
+// Function to close the modal (rest of the code is unchanged)
 function closeModal() {
     modal.style.display = "none";
 }

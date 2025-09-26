@@ -14,48 +14,49 @@
 
     <header>
         <h1>INFLUENCES</h1>
-        <p>A collection of books, music, and ideas that have shaped me.</p>
+        <p>The temporal lobe is helps us process language, sound, and memory. <br>
+            Here's a collection of books, music, and ideas that have shaped me.</p>
     </header>
 
-   <main class="gallery-container">
+    <main class="gallery-container">
     <div class="gallery-item large ted-talk">
-        <a href="#" onclick="openModal('images/ken_robinson.jpg', 'Do Schools Kill Creativity?', 'Sir Ken Robinson’s humorous and profound TED Talk challenged conventional educational systems, sparking a global conversation on creativity.')">
+        <a href="#" onclick="openModal('How Reliable Is Your Memory? | Elizabeth Loftus', 'I first encountered Dr. Loftus’s TED Talk on the fallacies of human memory in high school. It demonstrated the real-world impact of cognitive research, showing how experimental psychology can shape legal and societal practices, and inspired me to explore applications of psychological research beyond clinical settings.', 'https://www.youtube.com/watch?v=PB2OegI6wvI')">
             <img src="images/influences/loftusimage.png" alt="Image form Elizabeth Loftus's TED Talk">
         </a>
     </div>
 
     <div class="gallery-item normal arctic-monkeys">
-        <a href="#" onclick="openModal('images/arctic_monkeys.jpg', 'Arctic Monkeys', 'The band’s evolution from indie rock to more complex sounds has been a key influence on my taste in music.')">
+        <a href="#" onclick="openModal('Four Stars Out of Five by the Arctic Monkeys', 'The Arctic Monkeys are one of my favorite bands, particularly their Tranquility Base Hotel & Casino album, which imagines a singer with a residency on the Moon’s Tranquility Base. The album explores themes of disillusionment with overconsumption and mass media, creating thought-provoking social commentary reminiscent of Brave New World.', 'https://www.youtube.com/watch?v=71Es-8FfATo')">
             <img src="images/influences/amimage.png" alt="Arctic Monkeys album cover">
         </a>
     </div>
 
-    <div class="gallery-item normal handmaids-tale">
-        <a href="#" onclick="openModal('images/handmaidcover.jpg', 'The Handmaid’s Tale', 'Margaret Atwood’s dystopian novel is a chilling look at a future society and a powerful piece of social commentary.')">
+    <div id="book" class="gallery-item normal handmaids-tale">
+        <a href="#" onclick="openModal('The Handmaid’s Tale', 'This is my favorite book. Reading it for the first time while Roe v. Wade was overturned struck me as a powerful example of how literature can influence society. I was in awe of how well Margaret Atwood conveyed the psychological deterioration of the main character through her prose.', '')">
             <img src="images/influences/handmaidcover.jpg" alt="The Handmaid's Tale book cover">
         </a>
     </div>
 
     <div class="gallery-item tall kaguya">
-        <a href="#" onclick="openModal('images/the_tale_of_princess_kaguya.jpg', 'The Tale of Princess Kaguya', 'Studio Ghibli’s animated film is a beautiful, hand-drawn masterpiece with a moving narrative about life and acceptance.')">
+        <a href="#" onclick="openModal('The Tale of Princess Kaguya', 'As someone passionate about art, Studio Ghibli and Hayao Miyazaki have been my greatest inspirations. I am especially moved by how Miyazaki embeds his values, such as a deep reverence for nature, directly into his work. His dedication is not just stated but demonstrated, and I aspire to embody that level of commitment. This digital drawing depicts a scene from The Tale of Princess Kaguya, one of my favorite Studio Ghibli films. Although not directed by Miyazaki, the film’s hand-painted watercolor animation, developed over eight years, shows a level of commitment to craft that I hope to bring to my own research.', 'https://www.youtube.com/watch?v=PZK2y9NAaNo')">
             <img src="images/influences/kaguyaimage.png" alt="Still from The Tale of Princess Kaguya">
         </a>
     </div>
 
     <div class="gallery-item wide kauai">
-        <a href="#" onclick="openModal('images/kauai_oo.jpg', 'Kauai O’o (Racing Extinction)', 'A poignant clip from the documentary that documents the final song of a now-extinct bird, a powerful reminder of environmental impact.')">
+        <a href="#" onclick="openModal('The Last Song of the Kauai O’o Bird', 'The last song of the Kauai O’o bird, from the documentary Racing Extinction, inspired me when I first watched it in 2021. It motivated me to be make lifestyle changes to reduce my environmental impact, including becoming vegetarian, which I still am today.', 'https://www.youtube.com/watch?v=tRaC2Rx3BVY')">
             <img src="images/influences/Moho_braccatus.jpg" alt="Kauai O'o bird">
         </a>
     </div>
 
     <div class="gallery-item normal the-women">
-        <a href="#" onclick="openModal('images/thewomenimage.jpg', 'The Women', 'A profound movie about a tight-knit group of friends navigating life, careers, and the complexities of human relationships.')">
+        <a href="#" onclick="openModal('The Women', 'Historical fiction is a genre I love, and this novel is one of my favorites. The book portrays the resilience and strength of women navigating a world that often works against them and reminds me of the power of perseverance.', '')">
             <img src="images/influences/thewomenimage.jpg" alt="The Women book cover">
         </a>
     </div>
 
     <div class="gallery-item normal law-of-conservation">
-        <a href="#" onclick="openModal('images/law_of_conservation.jpg', 'Law of Conservation (Clip)', 'A thought-provoking clip that explores the idea that energy cannot be created or destroyed, only transformed.')">
+        <a href="#" onclick="openModal('Piaget\'s Conservation Tasks', 'My first foray into developmental psychology was my final AP Psychology project, in which I recreated Piaget’s tasks with children of different ages. I was fascinated to observe how children independently grasped fundamental concepts, such as conservation, simply through observation without any explicit instruction. This experience was what inspired me to pursue Cognitive Science to better understand the amazing learning abilities our minds develop.', 'https://www.youtube.com/watch?v=gnArvcWaH6I')">
             <img src="images/influences/conservationtaskimage.png" alt="Still from a Youtube clip">
         </a>
     </div>
@@ -64,7 +65,6 @@
     <div id="myModal" class="modal" onclick="closeModal()">
         <span class="close">&times;</span>
         <div class="modal-content" onclick="event.stopPropagation()">
-            <img id="modal-image" src="" alt="Popup image">
             <div class="modal-text">
                 <h2 id="modal-title"></h2>
                 <p id="modal-description"></p>
@@ -72,7 +72,7 @@
         </div>
     </div>
 
-     <a href="index.html" class="brain-button">
+    <a href="index.html" class="brain-button">
             <img src="logos/brain.svg" alt="Back to brain page">
     </a>
 

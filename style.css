@@ -271,25 +271,27 @@ h2 {
     font-size: 1.5rem;
     color: white;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: none;
     border-bottom: 2px solid #ccc; /* A subtle line for separation */
     padding-bottom: 0.5rem;
+    text-align: left;
 }
 
 /* Existing styles below (no changes needed for the project layout) */
 .research-section, .academic-section {
     margin-top: 2rem;
+    text-align: left;
 }
 
 .research-project {
     color: white;
     display: flex;
     gap: 20px;
-    align-items: flex-start;
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .project-image {
@@ -308,11 +310,25 @@ h2 {
 
 .project-description {
     flex-grow: 1;
+    text-align: left;
 }
 
 .project-description h3 {
     margin-top: 0;
+    text-align: left;
+    margin-bottom: none;
 }
+
+p.lab {
+text-align: left;
+font-style: italic;
+margin-top: none;
+}
+
+p.content {
+text-align: left;
+}
+
 
 /* Responsive Design for smaller screens */
 @media (max-width: 768px) {
@@ -348,7 +364,7 @@ h2 {
   flex-direction: column;   /* stack image and caption */
 
 
-  width: 80%; /* Adjust this to change the width of the carousel */
+  width: 50%; /* Adjust this to change the width of the carousel */
   margin: 0 auto; /* This centers the carousel on the page */
 }
 
@@ -370,8 +386,9 @@ h2 {
   width: 100%;
   max-width: 100%;          /* ensures responsiveness */
   border-radius: 10px;
-  height: auto;
+  max-height: 450px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
 
 .carousel-slide .caption {
@@ -468,7 +485,7 @@ h2 {
 /* Sizing and placement for The Women */
 .the-women {
     grid-column: 10 / span 3;
-    grid-row: 9 / span 8;
+    grid-row: 9 / span 5;
 }
 
 /* Sizing and placement for Law of Conservation */
@@ -524,6 +541,7 @@ h2 {
 
 .modal-text h2 {
     margin: 0 0 10px;
+    text-align: center;
 }
 
 .modal-text p {
